@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Spotify web player clone: music for everyone.">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='12' fill='%231db954'/%3E%3Cpath d='M5 9c5-1.5 10-1 14 1.3M6 12.6c4-1.1 8-.7 11 1.1M7 16c3-.8 6-.5 8.5.9' stroke='black' stroke-width='1.8' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <nav class="panel nav">
+                <a class="nav-option active" href="#"><i class="fa-solid fa-house"></i><span>Home</span></a>
+                <a class="nav-option" href="#"><i class="fa-solid fa-magnifying-glass"></i><span>Search</span></a>
+            </nav>
+            <section class="panel library">
+                <div class="library-header">
+                    <a class="nav-option" href="#"><i class="fa-solid fa-book-open"></i><span>Your Library</span></a>
+                    <div class="library-actions">
+                        <button class="icon-btn" aria-label="Create playlist"><i class="fa-solid fa-plus"></i></button>
+                        <button class="icon-btn" aria-label="Expand library"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="box">
+                    <p class="box-title">Create your first playlist</p>
+                    <p class="box-text">It's easy, we'll help you</p>
+                    <button class="badge">Create playlist</button>
+                </div>
+                <div class="box">
+                    <p class="box-title">Let's find some podcasts to follow</p>
+                    <p class="box-text">We'll keep you updated on new episodes</p>
+                    <button class="badge">Browse podcasts</button>
+                </div>
+            </section>
+        </aside>
+
+        <main class="panel main-content">
+            <header class="top-bar">
+                <div class="history-buttons">
+                    <button class="circle-btn" aria-label="Back"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="circle-btn hide-small" aria-label="Forward"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="top-actions">
+                    <button class="badge">Explore Premium</button>
+                    <button class="badge dark-badge"><i class="fa-solid fa-download"></i>Install App</button>
+                    <button class="circle-btn" aria-label="Profile"><i class="fa-regular fa-user"></i></button>
+                </div>
+            </header>
+
+            <section class="shelf">
+                <h2>Recently played</h2>
+                <div class="cards">
+                    <article class="card" data-title="Top 50 - Global">
+                        <div class="card-img" style="--a:#1db954;--b:#0b3d2e"><i class="fa-solid fa-earth-americas"></i></div>
+                        <p class="card-title">Top 50 - Global</p>
+                        <p class="card-info">Your daily update of the most played tracks.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="shelf">
+                <h2>Trending now near you</h2>
+                <div class="cards">
+                    <article class="card" data-title="Trending Hits">
+                        <div class="card-img" style="--a:#e8115b;--b:#4a0d25"><i class="fa-solid fa-fire"></i></div>
+                        <p class="card-title">Trending Hits</p>
+                        <p class="card-info">The songs everyone is playing right now.</p>
+                    </article>
+                    <article class="card" data-title="Chill Vibes">
+                        <div class="card-img" style="--a:#509bf5;--b:#10264a"><i class="fa-solid fa-mug-hot"></i></div>
+                        <p class="card-title">Chill Vibes</p>
+                        <p class="card-info">Relaxed tracks for a calm evening.</p>
+                    </article>
+                    <article class="card" data-title="Workout Mix">
+                        <div class="card-img" style="--a:#ff6437;--b:#4a1a0b"><i class="fa-solid fa-dumbbell"></i></div>
+                        <p class="card-title">Workout Mix</p>
+                        <p class="card-info">High-energy beats to keep you moving.</p>
+                    </article>
+                    <article class="card" data-title="Late Night Drive">
+                        <div class="card-img" style="--a:#8d67ab;--b:#231436"><i class="fa-solid fa-car-side"></i></div>
+                        <p class="card-title">Late Night Drive</p>
+                        <p class="card-info">Synths and slow grooves after dark.</p>
+                    </article>
+                    <article class="card" data-title="Acoustic Morning">
+                        <div class="card-img" style="--a:#f5b700;--b:#4a3500"><i class="fa-solid fa-guitar"></i></div>
+                        <p class="card-title">Acoustic Morning</p>
+                        <p class="card-info">Soft guitars to start the day.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="shelf">
+                <h2>Featured charts</h2>
+                <div class="cards">
+                    <article class="card" data-title="Top 50 - Global">
+                        <div class="card-img" style="--a:#1db954;--b:#0b3d2e"><i class="fa-solid fa-chart-line"></i></div>
+                        <p class="card-title">Top 50 - Global</p>
+                        <p class="card-info">Your daily update of the most played tracks.</p>
+                    </article>
+                    <article class="card" data-title="Top Songs - India">
+                        <div class="card-img" style="--a:#ff9933;--b:#14532d"><i class="fa-solid fa-ranking-star"></i></div>
+                        <p class="card-title">Top Songs - India</p>
+                        <p class="card-info">The most played songs in India today.</p>
+                    </article>
+                    <article class="card" data-title="Viral 50 - Global">
+                        <div class="card-img" style="--a:#00c2c7;--b:#06323a"><i class="fa-solid fa-share-nodes"></i></div>
+                        <p class="card-title">Viral 50 - Global</p>
+                        <p class="card-info">The tracks spreading fastest worldwide.</p>
+                    </article>
+                </div>
+            </section>
+
+            <footer class="footer"><div class="line"></div></footer>
+        </main>
+
+        <footer class="music-player">
+            <div class="now-playing">
+                <div class="album-art"><i class="fa-solid fa-music"></i></div>
+                <div class="track-meta">
+                    <p class="track-title" id="track-title">Top 50 - Global</p>
+                    <p class="track-artist">Spotify</p>
+                </div>
+            </div>
+            <div class="player">
+                <div class="player-controls">
+                    <button class="icon-btn" aria-label="Shuffle"><i class="fa-solid fa-shuffle"></i></button>
+                    <button class="icon-btn" aria-label="Previous"><i class="fa-solid fa-backward-step"></i></button>
+                    <button class="play-btn" id="play-btn" aria-label="Play"><i class="fa-solid fa-play"></i></button>
+                    <button class="icon-btn" aria-label="Next"><i class="fa-solid fa-forward-step"></i></button>
+                    <button class="icon-btn" aria-label="Repeat"><i class="fa-solid fa-repeat"></i></button>
+                </div>
+                <div class="playback-bar">
+                    <span id="curr-time">0:00</span>
+                    <input type="range" min="0" max="100" value="0" step="1" class="progress-bar" id="progress-bar" aria-label="Track progress">
+                    <span id="tot-time">3:33</span>
+                </div>
+            </div>
+            <div class="controls">
+                <i class="fa-solid fa-volume-high"></i>
+                <input type="range" min="0" max="100" value="70" class="progress-bar volume" aria-label="Volume">
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
